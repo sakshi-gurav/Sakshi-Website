@@ -1,0 +1,383 @@
+:root {
+  --bg: #f8fbff;
+  --surface: #ffffff;
+  --surface-alt: #f4f8ff;
+  --text: #212529;
+  --muted: #6c757d;
+  --primary: #4158d0;
+  --primary-soft: #6c8cff;
+  --shadow: rgba(20, 30, 80, 0.1);
+  --border: rgba(19, 52, 86, 0.12);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, rgba(65, 88, 208, 0.08), transparent 30%), var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea {
+  font-family: inherit;
+}
+
+header.header {
+  background: var(--surface);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+.brand-highlight {
+  color: var(--primary);
+}
+
+.nav-link {
+  color: var(--text) !important;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-header .subtitle {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 60px;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  left: -120px;
+  top: -60px;
+  width: 320px;
+  height: 320px;
+  background: rgba(65, 88, 208, 0.12);
+  border-radius: 50%;
+  filter: blur(35px);
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  right: -120px;
+  bottom: -40px;
+  width: 260px;
+  height: 260px;
+  background: rgba(100, 194, 255, 0.12);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.hero-section h1 {
+  line-height: 1.05;
+}
+
+.hero-actions .btn {
+  min-width: 170px;
+}
+
+.hero-stats {
+  gap: 18px;
+}
+
+.stat-card {
+  background: var(--surface);
+  min-width: 180px;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.hero-image {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  border: 12px solid rgba(255,255,255,0.45);
+  background: linear-gradient(145deg, rgba(255,255,255,0.7), rgba(255,255,255,0.15));
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+}
+
+.card, .section, .footer {
+  border: none;
+}
+
+.info-box,
+.skill-card,
+.service-card,
+.project-card,
+.feature-card,
+.pricing-card,
+.testimonial-card,
+.contact-info,
+.contact-form {
+  background: var(--surface);
+}
+
+.skill-card,
+.service-card,
+.feature-card,
+.pricing-card,
+.testimonial-card,
+.contact-info,
+.contact-form {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover,
+.service-card:hover,
+.feature-card:hover,
+.pricing-card:hover,
+.testimonial-card:hover,
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(65, 88, 208, 0.1);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.service-price {
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+
+.service-list,
+.pricing-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.service-list li,
+.pricing-list li {
+  margin-bottom: 0.8rem;
+}
+
+.service-list li::before,
+.pricing-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 0.75rem;
+  color: var(--primary);
+}
+
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 240px;
+}
+
+.project-card h5 {
+  margin-bottom: 0.75rem;
+}
+
+.tech-list {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.pricing-card {
+  border: 1px solid var(--border);
+}
+
+.featured-plan {
+  border-color: var(--primary);
+}
+
+.testimonial-card {
+  min-height: 260px;
+}
+
+.contact-info a {
+  color: inherit;
+}
+
+.scroll-top,
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top {
+  bottom: 90px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.whatsapp-float {
+  bottom: 20px;
+  background: #25d366;
+  color: #fff;
+}
+
+.footer {
+  background: #101828;
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+.footer-links li + li {
+  margin-top: 0.75rem;
+}
+footer{
+    background:#0F172A;
+    color:white;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  color: #fff;
+}
+
+.contact-form .form-control,
+.contact-form .form-control:focus {
+  border-radius: 14px;
+  background: #f8fbff;
+  border: 1px solid var(--border);
+}
+
+.dark-theme .contact-form .form-control,
+.dark-theme .contact-form .form-control:focus {
+  background: #15203b;
+  border-color: rgba(255,255,255,0.12);
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 251, 255, 0.95);
+  z-index: 2000;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    padding-top: 80px;
+  }
+  .hero-image {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-actions {
+    align-items: stretch;
+  }
+  .hero-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section {
+    padding: 60px 0;
+  }
+  .hero-section {
+    padding-top: 60px;
+  }
+}
