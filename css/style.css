@@ -166,7 +166,6 @@ header.header {
 .service-card,
 .project-card,
 .feature-card,
-.pricing-card,
 .testimonial-card,
 .contact-info,
 .contact-form {
@@ -176,7 +175,6 @@ header.header {
 .skill-card,
 .service-card,
 .feature-card,
-.pricing-card,
 .testimonial-card,
 .contact-info,
 .contact-form {
@@ -186,7 +184,6 @@ header.header {
 .skill-card:hover,
 .service-card:hover,
 .feature-card:hover,
-.pricing-card:hover,
 .testimonial-card:hover,
 .contact-info:hover,
 .contact-form:hover {
@@ -205,25 +202,17 @@ header.header {
   font-size: 1.5rem;
 }
 
-.service-price {
-  font-weight: 700;
-  margin: 16px 0 8px;
-}
-
-.service-list,
-.pricing-list {
+.service-list {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
 
-.service-list li,
-.pricing-list li {
+.service-list li {
   margin-bottom: 0.8rem;
 }
 
-.service-list li::before,
-.pricing-list li::before {
+.service-list li::before {
   content: '\f00c';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
@@ -249,14 +238,6 @@ header.header {
 .feature-icon {
   font-size: 2rem;
   color: var(--primary);
-}
-
-.pricing-card {
-  border: 1px solid var(--border);
-}
-
-.featured-plan {
-  border-color: var(--primary);
 }
 
 .testimonial-card {
